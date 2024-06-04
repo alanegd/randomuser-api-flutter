@@ -26,9 +26,7 @@ class PersonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: CircleAvatar(
-          backgroundImage: NetworkImage(thumbnail),
-        ),
+        leading: Image.network(thumbnail),
         title: Text('$title $first $last'),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

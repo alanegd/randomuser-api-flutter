@@ -11,16 +11,18 @@ class PeopleList extends StatelessWidget {
     return ListView.builder(
       itemCount: people.length,
       itemBuilder: (context, index) {
-        return PersonCard(
-          thumbnail: people[index].picture.thumbnail,
-          title: people[index].name.title,
-          first: people[index].name.first,
-          last: people[index].name.last,
-          gender: people[index].gender,
-          city: people[index].location.city,
-          email: people[index].email,
-          cell: people[index].cell,
-        );
+        return Padding(
+            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+            child: PersonCard(
+              thumbnail: people[index].picture.thumbnail,
+              title: people[index].name.title,
+              first: people[index].name.first,
+              last: people[index].name.last,
+              gender: people[index].gender,
+              city: people[index].location.city,
+              email: people[index].email,
+              cell: people[index].cell,
+            ));
       },
     );
   }
